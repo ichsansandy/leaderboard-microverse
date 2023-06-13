@@ -1,4 +1,5 @@
 import './style.css';
+import GAME_ID from './modules/environment.js';
 
 const dataRank = [
   {
@@ -32,6 +33,7 @@ const dataRank = [
 ];
 
 function loop(data) {
+  console.log(GAME_ID);
   return `
     <tr>
       <td>${data.name}</td>
