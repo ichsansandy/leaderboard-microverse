@@ -17,6 +17,18 @@ const dataRank = [
     name: 'Carl',
     points: Math.floor(Math.random() * 100),
   },
+  {
+    name: 'Carl',
+    points: Math.floor(Math.random() * 100),
+  },
+  {
+    name: 'Carl',
+    points: Math.floor(Math.random() * 100),
+  },
+  {
+    name: 'Carl',
+    points: Math.floor(Math.random() * 100),
+  },
 ];
 
 function loop(data) {

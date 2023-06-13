@@ -1,3 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
+
+:root {
+  --primary-color: #717754;
+}
+
+* {
+  font-family: 'Della Respira', serif;
+  box-sizing: border-box;
+}
+
 html {
   color-scheme: dark;
+}
+
+h1 {
+  font-size: 55px;
+}
+
+section {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 25px 0;
+  font-size: 1em;
+  min-width: 300px;
+  padding: 25px;
+  box-shadow: 7px 7px 21px #666, -7px -7px 21px #666;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.styled-table {
+  border-collapse: collapse;
+}
+
+.styled-table thead tr {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 15px 25px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  /* background-color: #f3f3f3; */
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+form {
+  padding: 50px 5px;
+}
+
+@media (min-width: 768px) {
+  section {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+  }
+}
+
+/* utility class */
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
 }
