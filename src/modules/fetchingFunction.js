@@ -10,7 +10,7 @@ export const postNewScore = async (input) => {
     },
     body: JSON.stringify(input),
   });
-  return resp.json();
+  return resp;
 };
 
 export const getScore = async () => {

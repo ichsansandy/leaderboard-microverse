@@ -4,6 +4,6 @@ export default class Leaderboard {
   }
 
   sort() {
-    this.data.sort((a, b) => a.score - b.score);
+    this.data.sort((a, b) => b.score - a.score);
   }
 }

@@ -9,6 +9,7 @@ const leaderboard = new Leaderboard();
 
 getScore().then((data) => {
   leaderboard.data = data.result;
+  leaderboard.sort();
   loadLeaderboard(leaderboard.data);
 });
 
@@ -22,6 +23,7 @@ const refreshButton = document.querySelector('#refresh-button');
 refreshButton.addEventListener('click', () => {
   getScore().then((data) => {
     leaderboard.data = data.result;
+    leaderboard.sort();
     loadLeaderboard(leaderboard.data);
   });
 });
