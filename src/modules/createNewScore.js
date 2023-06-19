@@ -1,6 +1,6 @@
 import { postNewScore } from './fetchingFunction.js';
 
-export default function createNewScore() {
+const createNewScore = () => {
   const userInput = document.querySelector('#user-input');
   const scoreInput = document.querySelector('#score-input');
 
@@ -10,4 +10,6 @@ export default function createNewScore() {
       scoreInput.value = '';
     }
   });
-}
+};
+
+export default createNewScore;

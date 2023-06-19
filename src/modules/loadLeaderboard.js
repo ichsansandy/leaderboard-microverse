@@ -1,4 +1,4 @@
-export default function loadLeaderboard(array) {
+const loadLeaderboard = (array) => {
   function loop(data) {
     return `
           <tr>
@@ -11,4 +11,6 @@ export default function loadLeaderboard(array) {
   const table = document.querySelector('#table-body');
 
   table.innerHTML = array.map((data) => loop(data)).join('');
-}
+};
+
+export default loadLeaderboard;
