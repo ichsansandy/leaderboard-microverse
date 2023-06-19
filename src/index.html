@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2282/2282580.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/d19de2aa55.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main>
+      <h1 class="title-style text-center">Leaderboard</h1>
+      <section>
+        <div>
+          <div class="container flex-center space-between">
+            <span>Recent Score</span><button>Refresh <i class="fas fa-rotate"></i></button>
+          </div>
+          <table class="container styled-table text-center">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+        <form class="flex-center flex-column container">
+          <label>Name </label>
+          <input type="text" />
+          <label> Score </label>
+          <input type="number" />
+          <button>Add score</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
