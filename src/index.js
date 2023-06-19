@@ -1,45 +1,29 @@
 import './style.css';
 
-const dataRank = [
-  {
-    name: 'John',
-    points: Math.floor(Math.random() * 100),
-  },
-  {
-    name: 'Doe',
-    points: Math.floor(Math.random() * 100),
-  },
-  {
-    name: 'Mel',
-    points: Math.floor(Math.random() * 100),
-  },
-  {
-    name: 'Carl',
-    points: Math.floor(Math.random() * 100),
-  },
-  {
-    name: 'Carl',
-    points: Math.floor(Math.random() * 100),
-  },
-  {
-    name: 'Carl',
-    points: Math.floor(Math.random() * 100),
-  },
-  {
-    name: 'Carl',
-    points: Math.floor(Math.random() * 100),
-  },
-];
+import Leaderboard from './modules/Leaderboard.js';
+import loadLeaderboard from './modules/loadLeaderboard.js';
+import createNewScore from './modules/createNewScore.js';
+import { getScore } from './modules/fetchingFunction.js';
 
-function loop(data) {
-  return `
-    <tr>
-      <td>${data.name}</td>
-      <td>${data.points}</td>
-    </tr>
-  `;
-}
+const leaderboard = new Leaderboard();
 
-const table = document.querySelector('#table-body');
+getScore().then((data) => {
+  leaderboard.data = data.result;
+  leaderboard.sort();
+  loadLeaderboard(leaderboard.data);
+});
 
-table.innerHTML = dataRank.map((data) => loop(data)).join('');
+const addButton = document.querySelector('#add-button');
+addButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  createNewScore();
+});
+
+const refreshButton = document.querySelector('#refresh-button');
+refreshButton.addEventListener('click', () => {
+  getScore().then((data) => {
+    leaderboard.data = data.result;
+    leaderboard.sort();
+    loadLeaderboard(leaderboard.data);
+  });
+});

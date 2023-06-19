@@ -14,7 +14,7 @@
       <section>
         <div>
           <div class="container flex-center space-between">
-            <span>Recent Score</span><button>Refresh <i class="fas fa-rotate"></i></button>
+            <span>Recent Score</span><button id="refresh-button" type="button">Refresh <i class="fas fa-rotate"></i></button>
           </div>
           <table class="container styled-table text-center">
             <thead>
@@ -28,10 +28,10 @@
         </div>
         <form class="flex-center flex-column container">
           <label>Name </label>
-          <input type="text" />
+          <input id="user-input" type="text" required />
           <label> Score </label>
-          <input type="number" />
-          <button>Add score</button>
+          <input id="score-input" type="number" required />
+          <button id="add-button" type="submit">Add score</button>
         </form>
       </section>
     </main>

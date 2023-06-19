@@ -29,7 +29,7 @@ section {
   font-size: 1em;
   min-width: 300px;
   padding: 25px;
-  box-shadow: 7px 7px 21px #666, -7px -7px 21px #666;
+  box-shadow: 7px 7px 21px #333, -7px -7px 21px #222;
   border-radius: 20px;
   overflow: hidden;
 }
