@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { postNewScore } from './fetchingFunction.js';
 
 const createNewScore = () => {
@@ -8,6 +9,18 @@ const createNewScore = () => {
     if (resp.status === 201) {
       userInput.value = '';
       scoreInput.value = '';
+      Swal.fire({
+        icon: 'success',
+        title: 'Good Job',
+        text: 'Score updated',
+      });
+    }
+    if (resp.status === 400) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: "Name or Score can't be empty!",
+      });
     }
   });
 };

@@ -1,9 +1,11 @@
+import numberWithCommas from './numberSeparator.js';
+
 const loadLeaderboard = (array) => {
   function loop(data) {
     return `
           <tr>
             <td>${data.user}</td>
-            <td>${data.score}</td>
+            <td>${numberWithCommas(data.score)}</td>
           </tr>
         `;
   }

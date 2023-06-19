@@ -46,6 +46,7 @@ section {
 .styled-table th,
 .styled-table td {
   padding: 15px 25px;
+  max-width: 20ch;
 }
 
 .styled-table tbody tr {
