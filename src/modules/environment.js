@@ -1,4 +1,3 @@
-// eslint-disable-next-line prefer-destructuring
-const GAME_ID = process.env.GAME_ID;
+const { GAME_ID } = process.env;
 
 export default GAME_ID;
